@@ -1,0 +1,5 @@
+# Identify the MAC address of the Wi-Fi card
+# en1 is the Wi-Fi card
+# awk is used to print the value following ether
+
+ifconfig en1 | awk '/ether/{print $2}'
